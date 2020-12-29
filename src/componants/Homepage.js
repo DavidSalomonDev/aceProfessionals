@@ -208,9 +208,9 @@ export const HomePage = () => {
                         </button>
                     </div>
                 </div>
-
-
-                <Accordion />
+                <div className="my-4 border-2 rounded-lg">
+                    <Accordion />
+                </div>
 
 
 
