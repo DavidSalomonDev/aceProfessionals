@@ -37,7 +37,7 @@ export const Accordion = (props) => {
                         isCollapsed={bindIndex !== props.index}
                         label={props.label}
                         handleClick={() => changeItem(props.index)}
-                        children={props.children}
+                        children={props.children} key={props.index}
                     />
                 ))}
             </>

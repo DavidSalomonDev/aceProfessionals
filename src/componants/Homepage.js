@@ -197,7 +197,7 @@ export const HomePage = () => {
                     className={`my-12 ${isVideoOpen ? "" : "hidden"}`}>
 
                     <center className="inline md:w-10/12  bg-blue  ">
-                        <iframe width="100%" title="video" height="350" src="https://www.youtube.com/embed/4eWF2nftXsE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></center>
+                        <iframe width="100%" title="video" height="350" src="https://www.youtube.com/embed/4eWF2nftXsE" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe></center>
 
                 </div>
                 <div className="mt-5 sm:mt-8  sm:flex sm:justify-center lg:justify-start">
@@ -221,8 +221,8 @@ export const HomePage = () => {
                 <div className="w-full my-12  m-auto ">
                     <center> <span data-aos-duration="1000" data-aos="fade-up"
                         className="block xl:inline  text-2xl tracking-tight font-bold  text-gray-900 sm:text-3xl md:text-4xl text-gray-700"> What you’ll get from the webinar?</span></center>
-                    <center>  <p data-aos-duration="1000" data-aos="fade-up"
-                        className="mt-3 text-base m-4 text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"> We understand your problem about starting something new with a simple & easy to replicate path for earning income.</p>
+                    <center>  <span data-aos-duration="1000" data-aos="fade-up"
+                        className="mt-3 text-base m-4 text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"> We understand your problem about starting something new with a simple & easy to replicate path for earning income.</span>
                     </center>
                     <center>
 
@@ -232,19 +232,19 @@ export const HomePage = () => {
                     <ul className=" rounded-lg m-4 text-blue-800">
 
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg">
-                            <div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div> Exact way to earn income  that fits best for your financial goals.</div></div>
+                            <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div> Exact way to earn income  that fits best for your financial goals.</div></div>
                         </li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg">
-                            <div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How to kick start a micro entrepreneurship with aces</div></div> </li>
+                            <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How to kick start a micro entrepreneurship with aces</div></div> </li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg">
-                            <div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Real truth & myths of business world.</div></div></li>
+                            <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Real truth & myths of business world.</div></div></li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg">
-                            <div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How to start earn within next 30 days with Ace.</div></div></li>
-                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>To operate everything with our Special management system.</div></div></li>
-                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Exactly the ground-level start to high level income.</div></div></li>
-                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Handholding support & system that can help.</div></div></li>
-                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How you run and operate everything very smoothly.</div></div></li>
-                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div classNameName="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Discover a FREE bonus specially designed for your growth.</div></div></li>
+                            <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How to start earn within next 30 days with Ace.</div></div></li>
+                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>To operate everything with our Special management system.</div></div></li>
+                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Exactly the ground-level start to high level income.</div></div></li>
+                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Handholding support & system that can help.</div></div></li>
+                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How you run and operate everything very smoothly.</div></div></li>
+                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Discover a FREE bonus specially designed for your growth.</div></div></li>
                     </ul>
 
                 </div>
@@ -268,7 +268,7 @@ export const HomePage = () => {
                             <span className=" text-xl">
                                 <div className="mx-auto flex-shrink-0 flex items-center justify-center  w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
                                     <svg className="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                                     </svg>
                                 </div>
                                 DISCLAIMER:-
@@ -397,7 +397,7 @@ export const HomePage = () => {
                     </div>
                     <div data-aos="flip-down" data-aos-duration="1000" className="max-w-6xl mx-auto sm:px-6 py-4  bg-gray-900 text-gray-100 rounded-lg px-6">
                         <span className="glow block  text-4xl">FREE</span>
-                        <div class="md:text-center font-bold text-1xl"> For webinar attendee’s,<br />
+                        <div className="md:text-center font-bold text-1xl"> For webinar attendee’s,<br />
                             <span className="text-4xl animate-ping color_red" >ACEFLIX</span>     <br />
                             IS A FREE BONUS…
                             <span className="block">21 DAYS CARREER & SKILLS RELATED SHOWS</span>
