@@ -484,10 +484,13 @@ export const HomePage = () => {
 
 
 
-            <a href="https://wa.me/8351023981I'text=Thank%20you%0for%20contacting%20Ace%20Professionals%20😄
-            %0We%20will%20get%20back%20to%20you%20shortly!
-            %0Please%20leave%20your%20message... 
-            %0Namaste🙏🏻">
+        
+            <a href="https://api.whatsapp.com/send?phone=8351023981&text=Thank%20you%20for%20contacting%20Ace%20Professionals%20😄
+            %20We%20will%20get%20back%20to%20you%20shortly!
+            %20Please%20leave%20your%20message... 
+            %20Namaste🙏🏻?&source=&data=">
+
+
                 <div className={`fixed bottom-0 md:hidden flex z-50 justify-end mx-12 ${!showModal ? "visible " : "invisible"}`} style={{ right: "-10%", bottom: "5%" }}>
 
 

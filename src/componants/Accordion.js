@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { FcCollapse, FcExpand } from "react-icons/fc";
+
+
 export const Accordion = (props) => {
 
     const AccordionItem = ({ label, isCollapsed, handleClick, children }) => {
@@ -23,11 +25,11 @@ export const Accordion = (props) => {
 
     const Accordion = ({ defaultIndex, onItemClick, children }) => {
         const [bindIndex, setBindIndex] = useState(defaultIndex);
-
         const changeItem = itemIndex => {
             if (typeof onItemClick === 'function') onItemClick(itemIndex);
             if (itemIndex !== bindIndex) setBindIndex(itemIndex);
         };
+        
         const items = children.filter(item => item.type.name === 'AccordionItem');
 
         return (
@@ -43,25 +45,31 @@ export const Accordion = (props) => {
             </>
         );
     };
+
+
+
+
+
     return (
         <div>
+            <center>FAQ</center>
             <Accordion defaultIndex="1" >
 
                 <AccordionItem label="SHOULD I HAVE TO PAY FOR THIS WEBINAR?" index="1">
                     No, you don’t have to pay a single penny for this web conference.😊
-    </AccordionItem>
+                </AccordionItem>
 
                 <AccordionItem label="I DONT HAVE ANY BUSINESS BACKGROUND, HOW SHOULD I START FROM SCRATCH?" index="2">
                     No worries, anyone can learn anything on this earth, we have business experts who early belongs to engineering & medical professions  but Now they are doing very well.👍🏻
-    </AccordionItem>
+                </AccordionItem>
 
                 <AccordionItem label="WHAT KIND OF BUSINESS MODEL ACE PROVIDES?" index="3">
                     AT ACE, you will meet with a combination of two models, an asset-light & franchisee model which is called HYBRID BUSINESS MODEL.✌🏻
-    </AccordionItem>
+                </AccordionItem>
 
                 <AccordionItem label="I DONT KNOW WHAT IS THIS MODEL, IS THIS FOR ME ?" index="4">
                     Yes, this is for you, you can do this with us on a part-time basis too, your efforts will give you results.💰
-    </AccordionItem>
+                </AccordionItem>
             </Accordion>
         </div>
     )
