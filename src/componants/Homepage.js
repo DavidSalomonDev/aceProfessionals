@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FcCheckmark, FcTodoList, FcAcceptDatabase, FcStart, } from "react-icons/fc";
 import { FiMail, FiFacebook, FiInstagram, FiTwitter, FiYoutube } from 'react-icons/fi';
 import { Countdown } from './Countdown';
-import { Accordion } from './Accordion';
+import { AccordionPage } from './Accordion';
 import { PopUpForm } from './PopUpForm';
 
 
@@ -209,7 +209,7 @@ export const HomePage = () => {
                     </div>
                 </div>
                 <div className="my-4 border-2 rounded-lg">
-                    <Accordion />
+                    <AccordionPage />
                 </div>
 
 

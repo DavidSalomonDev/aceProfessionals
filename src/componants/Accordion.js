@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FcCollapse, FcExpand } from "react-icons/fc";
 
 
-export const Accordion = (props) => {
+export const AccordionPage = (props) => {
 
     const AccordionItem = ({ label, isCollapsed, handleClick, children }) => {
         return (
@@ -29,7 +29,7 @@ export const Accordion = (props) => {
             if (typeof onItemClick === 'function') onItemClick(itemIndex);
             if (itemIndex !== bindIndex) setBindIndex(itemIndex);
         };
-        
+
         const items = children.filter(item => item.type.name === 'AccordionItem');
 
         return (
