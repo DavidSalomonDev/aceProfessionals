@@ -19,7 +19,7 @@ export const Countdown = (props) => {
         prevScrollpos = currentScrollPos;
     }
     useEffect(() => {
-        const x = setInterval(function () {
+        setInterval(function () {
             let now = new Date().getTime();
             // Get today's date and time
             let countDownDate = new Date(`Jan 2, 2021 14:35:25`).getTime();
@@ -52,21 +52,21 @@ export const Countdown = (props) => {
 
     if (distance < 0) {
         return (
-            <div className=" fixed bg-red-700 shadow-md block     py-3 md:px-6  z-50 w-full px-5 py-1 flex justify-between items-center" style={{ top: navbar }}>
-                <center className="mb-0 font-bold md:text-2xl text-xs m-auto text-white ">
+            <div className=" fixed bg-red-700 shadow-md block     py-3 md:px-6  z-50 w-full px-5 py-1 flex justify-between items-div" style={{ top: navbar }}>
+                <div className="mb-0  text-center font-bold md:text-2xl text-xs m-auto text-white ">
 
                     <div className="block">Offer EXPIRED</div>
-                </center>
+                </div>
             </div>
         )
     }
     else {
         return (
             <div id="navbar" className=" fixed bg-red-700 shadow-md block     py-3 md:px-6  z-50 w-full px-5 py-1 flex justify-between items-center" style={{ top: navbar }}>
-                <center className="mb-0 font-bold md:text-2xl text-xs m-auto text-white ">
+                <div className="mb-0 text-center font-bold md:text-2xl text-xs m-auto text-white ">
 
                     <div className="block">Limited Seats Book Now</div>
-                </center>
+                </div>
                 <ul className="flex mt-0 justify-center">
                     <li>  <div className="  text-center border rounded-lg  border-red-700 bg-red-700 text-white rounded-md px-3 py-1 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline  ">
                         <span className="font-black m-0 p-0">{days}</span>
