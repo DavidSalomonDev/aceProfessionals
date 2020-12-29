@@ -2,75 +2,70 @@ import React, { useState } from 'react'
 import { FcCollapse, FcExpand } from "react-icons/fc";
 
 
-export const AccordionPage = (props) => {
-
-    const AccordionItem = ({ label, isCollapsed, handleClick, children }) => {
-        return (
-            <>
-                <div data-aos="fade-up"
-                    data-aos-duration="1500" className="m-4 p-4 cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
-                    <div className="accordion-div  block text-indigo-800 font-semibold" onClick={handleClick}>
-                        {label} {isCollapsed ? <FcExpand className="inline" /> : <FcCollapse className="inline" />}
-                    </div>
-                    <div
-                        className={`accordion-item ${isCollapsed ? 'collapsed' : 'expanded'}`}
-                        aria-expanded={isCollapsed}
-                    >
-                        {children}
-                    </div>
-                </div>
-            </>
-        );
-    };
-
-    const Accordion = ({ defaultIndex, onItemClick, children }) => {
-        const [bindIndex, setBindIndex] = useState(defaultIndex);
-        const changeItem = itemIndex => {
-            if (typeof onItemClick === 'function') onItemClick(itemIndex);
-            if (itemIndex !== bindIndex) setBindIndex(itemIndex);
-        };
-
-        const items = children.filter(item => item.type.name === 'AccordionItem');
-
-        return (
-            <>
-                {items.map(({ props }) => (
-                    <AccordionItem
-                        isCollapsed={bindIndex !== props.index}
-                        label={props.label}
-                        handleClick={() => changeItem(props.index)}
-                        children={props.children} key={props.index}
-                    />
-                ))}
-            </>
-        );
-    };
-
-
-
-
-
+export const AccordionPage = () => {
+    const [queone, setQueone] = useState(true)
+    const [quetwo, setQuetwo] = useState(true)
+    const [quethree, setQuethree] = useState(true)
+    const [quefour, setQuefour] = useState(true)
     return (
-        <Accordion defaultIndex="1" onItemClick={console.log}>
+        <div>
+            <div data-aos="fade-up"
+                data-aos-duration="1500" className="m-4 p-4 cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
+                <div className="accordion-div  block text-indigo-800 font-semibold" onClick={() => { setQueone(!queone) }}>
+                SHOULD I HAVE TO PAY FOR THIS WEBINAR? {queone ? <FcExpand className="inline" /> : <FcCollapse className="inline" />}
+                </div>
+                <div
+                    className={`accordion-item ${queone ? 'collapsed' : 'expanded'}`}
+                >
+            No, you don’t have to pay a single penny for this web conference.😊
+                   
+                </div>
+            </div>
 
-            <AccordionItem label="SHOULD I HAVE TO PAY FOR THIS WEBINAR?" index="1">
-                No, you don’t have to pay a single penny for this web conference.😊
-                </AccordionItem>
+            <div data-aos="fade-up"
+                data-aos-duration="1500" className="m-4 p-4 cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
+                <div className="accordion-div  block text-indigo-800 font-semibold" onClick={() => { setQuetwo(!quetwo) }}>
+                I DONT HAVE ANY BUSINESS BACKGROUND, HOW SHOULD I START FROM SCRATCH? {quetwo ? <FcExpand className="inline" /> : <FcCollapse className="inline" />}
+                </div>
+                <div
+                    className={`accordion-item ${quetwo ? 'collapsed' : 'expanded'}`}
+                >
+            No worries, anyone can learn anything on this earth, we have business experts who early belongs to engineering & medical professions  but Now they are doing very well.👍🏻
+           
+                   
+                </div>
+            </div>
 
-            <AccordionItem label="I DONT HAVE ANY BUSINESS BACKGROUND, HOW SHOULD I START FROM SCRATCH?" index="2">
-                No worries, anyone can learn anything on this earth, we have business experts who early belongs to engineering & medical professions  but Now they are doing very well.👍🏻
-                </AccordionItem>
+            <div data-aos="fade-up"
+                data-aos-duration="1500" className="m-4 p-4 cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
+                <div className="accordion-div  block text-indigo-800 font-semibold" onClick={() => { setQuethree(!quethree) }}>
+                WHAT KIND OF BUSINESS MODEL ACE PROVIDES?{quetwo ? <FcExpand className="inline" /> : <FcCollapse className="inline" />}
+                </div>
+                         <div className={`accordion-item ${quethree ? 'collapsed' : 'expanded'}`}  >
+                       No worries, anyone can learn anything on this earth, we have business experts who early belongs to engineering & medical professions  but Now they are doing very well.👍🏻
+                        </div>
+            </div>
 
-            <AccordionItem label="WHAT KIND OF BUSINESS MODEL ACE PROVIDES?" index="3">
-                AT ACE, you will meet with a combination of two models, an asset-light & franchisee model which is called HYBRID BUSINESS MODEL.✌🏻
-                </AccordionItem>
 
-            <AccordionItem label="I DONT KNOW WHAT IS THIS MODEL, IS THIS FOR ME ?" index="4">
-                Yes, this is for you, you can do this with us on a part-time basis too, your efforts will give you results.💰
-                </AccordionItem>
-        </Accordion>
+            <div data-aos="fade-up"
+                data-aos-duration="1500" className="m-4 p-4 cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
+                <div className="accordion-div  block text-indigo-800 font-semibold" onClick={() => { setQuefour(!quefour) }}>
+                I DONT KNOW WHAT IS THIS MODEL, IS THIS FOR ME ?{quefour ? <FcExpand className="inline" /> : <FcCollapse className="inline" />}
+                </div>
+                         <div className={`accordion-item ${quefour ? 'collapsed' : 'expanded'}`}  >
+                         Yes, this is for you, you can do this with us on a part-time basis too, your efforts will give you results.💰
+                        </div>
+            </div>
+        </div>
     )
 }
+
+
+
+
+
+
+
 
 
 
