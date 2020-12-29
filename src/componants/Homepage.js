@@ -112,7 +112,7 @@ export const HomePage = () => {
                     </div>
                 </main>
                 <div className="mt-12">
-                    <center ><span data-aos="flip-down" data-aos-duration="1000" className="text-3xl text-gray-800 font-bold ">Are you looking for…</span></center>
+                    <center ><span data-aos="flip-down" data-aos-duration="1000" className="text-3xl text-gray-800 font-bold  mt-12 md:mt-4">Are you looking for…</span></center>
 
                     <ul className=" list-disc md:w-1/2 w-10/12 m-auto mb-12 text-blue-800">
 
@@ -488,7 +488,7 @@ export const HomePage = () => {
             <a href="https://api.whatsapp.com/send?phone=+918351023981&text=Thank%20you%20for%20contacting%20Ace%20Professionals%20😄
             %20We%20will%20get%20back%20to%20you%20shortly!
             %20Please%20leave%20your%20message... 
-            %20Namaste🙏🏻?&source=&data=">
+            %20Namaste🙏🏻&source=&data=">
 
 
 
