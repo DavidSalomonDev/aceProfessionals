@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .list_icon {
+    padding-top: 4px;
+  }
+}
+
+.color_red {
+  color: #e50914;
+}
+
+.glow {
+  color: #ffffff;
+  text-shadow: 0 0 2px #ffffff 0 0 10px #ffffff 0 0 20px #e50914,
+    0 0 30px #e50914, 0 0 40px #e50914, 0 0 50px #e50914;
+  animation: blink 1.5s infinite alternate;
+}
+.glow-skyblue {
+  text-shadow: 0 0 2px #00b7ff, 0 0 10px #00b7ff, 0 0 20px #00b7ff,
+    0 0 40px #00b7ff, 0 0 70px #00b7ff, 0 0 80px #00b7ff;
+
+  animation: blinkBlue 1.5s infinite alternate;
+}
+
+@keyframes blinkBlue {
+  0% {
+  }
+  100% {
+    text-shadow: 0 0 2px #00b7ff, 0 0 10px #00b7ff, 0 0 20px #00b7ff,
+      0 0 40px #00b7ff, 0 0 70px #00b7ff, 0 0 80px #00b7ff;
+  }
+}
+
+@keyframes blink {
+  0% {
+  }
+  100% {
+    text-shadow: 0 0 2px #e50914, 0 0 10px #e50914, 0 0 20px #e50914,
+      0 0 40px #e50914, 0 0 70px #e50914, 0 0 80px #e50914;
+  }
+}
+
+.fix-width {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-inner::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll-inner::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+.scroll-inner::-webkit-scrollbar-track {
+  background-color: transparentize(#ccc, 0.7);
+}
+.scroll-inner::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: transparentize(#ccc, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+#navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+.accordion-item.collapsed {
+  display: none;
+}
+
+.accordion-item.expanded {
+  display: block;
+}
+
+.accordion-button {
+  display: block;
+  width: 100%;
+}
+
+h2::before {
+  display: block;
+  content: " ";
+  margin-top: -350px;
+  height: 350px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+.error {
+    color: #bf1650;
+  }
+  
+  .error::before {
+    display: inline;
+    content: "⚠ ";
+  }
