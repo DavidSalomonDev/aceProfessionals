@@ -108,7 +108,7 @@ export const HomePage = () => {
                         data-aos-duration="1500"
                         data-aos-easing="ease-out-cubic"
                         className=" mt-4 md:mt-0 md:w-1/2 mx-auto   rounded">
-                        <img className=" w-1/2 md:w-9/12  m-auto" src={process.env.PUBLIC_URL + "/aceLogo.jpg"} alt="Logo" />
+                        <img className=" w-1/2 md:w-9/12  m-auto" src={process.env.PUBLIC_URL + "/AceLogo.jpg"} alt="Logo" />
                     </div>
                 </main>
                 <div className="mt-12">
