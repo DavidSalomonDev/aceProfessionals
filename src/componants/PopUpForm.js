@@ -30,7 +30,7 @@ export const PopUpForm = (props) => {
             <div className="mt-8">
                 <span className="uppercase text-sm text-gray-600 font-bold">Email</span>
                 <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                    type="text" name="to_name" ref={register({ required: true ,  pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                    type="text" name="to_name" ref={register({ required: true ,  pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                 })} />
                 {errors.to_name && errors.to_name.type === "required" && (<span  class="error" >This is required</span>)}
                 {errors.to_name && errors.to_name.type === "pattern" && (<span  class="error" >Invalid Email</span>)}
