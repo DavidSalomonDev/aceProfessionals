@@ -176,13 +176,13 @@ export const HomePage = () => {
                     </ul>
                     <div data-aos-duration="1000" data-aos="fade-up"
                         className=" text-center my-12 px-2 py-2 hover:bg-blue-100 rounded">
-                        <p className=" text-gray-700 pointer " onClick={() => {
+                        <div className=" text-gray-700 pointer inline-block " onClick={() => {
                             setisVideoOpen(true)
                         }} >
 
                             If you fall in any of the categories just watch the video, It’ll hardly take your 5 minutes!
                         <center> <a href="#video" className="block text-2xl  bg-gray-200 rounded-lg  m-4 p-4  text-gray-900 pointer"><FcStart className="inline" />Click to watch the video</a></center>
-                        </p>
+                        </div>
                     </div>
 
                 </div>
