@@ -7,13 +7,13 @@ export const PopUpForm = (props) => {
     const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = (data, e) => {
-        // emailjs.send("service_ggy36e6", "template_817ivy8", e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });;
-        // e.target.reset()
+        emailjs.send("service_ggy36e6", "template_817ivy8", e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });;
+        e.target.reset()
         props.setshowModal(false)
         
     }
