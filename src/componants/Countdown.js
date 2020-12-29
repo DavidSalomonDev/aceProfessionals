@@ -21,9 +21,7 @@ export const Countdown = (props) => {
     useEffect(() => {
         setInterval(function () {
             let now = new Date().getTime();
-            // Get today's date and time
-            let countDownDate = new Date(`Jan 2, 2021 14:35:25`).getTime();
-            // Find the distance between now and the count down date
+            let countDownDate = new Date(`Jan 1, 2021 14:35:25`).getTime();
 
 
             let distance = countDownDate - now;
