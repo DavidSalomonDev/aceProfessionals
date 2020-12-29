@@ -8,25 +8,23 @@ export const Countdown = (props) => {
     const [seconds, setseconds] = useState()
     const [distance, setdistance] = useState()
     const [navbar, setnavbar] = useState(0)
-
-
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             setnavbar(0);
         } else {
-            setnavbar(-50);
+            setnavbar(-38);
         }
         prevScrollpos = currentScrollPos;
     }
-
     useEffect(() => {
         const x = setInterval(function () {
-            let countDownDate = new Date("Dec 30, 2020 15:37:25").getTime();
-            // Get today's date and time
             let now = new Date().getTime();
+            // Get today's date and time
+            let countDownDate = new Date(`Jan 2, 2021 14:35:25`).getTime();
             // Find the distance between now and the count down date
+
 
             let distance = countDownDate - now;
 
@@ -40,8 +38,10 @@ export const Countdown = (props) => {
             setminutes(minutes)
             setseconds(seconds)
             setdistance(distance)
+
+
+
         }, 1000);
-        console.log(x)
     }, [])
 
 
@@ -52,15 +52,17 @@ export const Countdown = (props) => {
 
     if (distance < 0) {
         return (
-            <div>
-                EXPIRED
+            <div className=" fixed bg-red-700 shadow-md block     py-3 md:px-6  z-50 w-full px-5 py-1 flex justify-between items-center" style={{ top: navbar }}>
+                <center className="mb-0 font-bold md:text-2xl text-xs m-auto text-white ">
+
+                    <div className="block">Offer EXPIRED</div>
+                </center>
             </div>
         )
     }
     else {
         return (
-            <div id="navbar" className=" fixed bg-red-700 shadow-md block     py-3 md:px-6  z-50 w-full px-5 py-1 flex justify-between items-center" style={{ top: navbar }}
-            >
+            <div id="navbar" className=" fixed bg-red-700 shadow-md block     py-3 md:px-6  z-50 w-full px-5 py-1 flex justify-between items-center" style={{ top: navbar }}>
                 <center className="mb-0 font-bold md:text-2xl text-xs m-auto text-white ">
 
                     <div className="block">Limited seats Book Now</div>
@@ -69,11 +71,11 @@ export const Countdown = (props) => {
                     <li>  <div className="  text-center border rounded-lg  border-red-700 bg-red-700 text-white rounded-md px-3 py-1 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline  ">
                         <span className="font-black m-0 p-0">{days}</span>
                         <div className="text-xs font-extralight  ">Days</div>
-                         </div>
-                        </li>
+                    </div>
+                    </li>
 
                     <li>  <div className="  text-center border rounded-lg border-red-700 bg-red-700 text-white rounded-md px-3 py-1 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline  ">
-                    <span className="font-black m-0 p-0">{hours}</span><div className="text-xs font-extralight ">Hours</div></div></li>
+                        <span className="font-black m-0 p-0">{hours}</span><div className="text-xs font-extralight ">Hours</div></div></li>
 
                     <li>  <div className="  text-center border rounded-lg border-red-700 bg-red-700 text-white rounded-md px-3 py-1 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline  "><span className="font-black m-0 p-0">{minutes}</span><div className="text-xs font-extralight  ">Minutes</div></div></li>
 

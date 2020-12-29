@@ -1,27 +1,17 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
-import { useForm } from "react-hook-form";
 import { FcCheckmark, FcTodoList, FcAcceptDatabase, FcStart, } from "react-icons/fc";
 import { FiMail, FiFacebook, FiInstagram, FiTwitter, FiYoutube, FiXOctagon } from 'react-icons/fi';
 import { Countdown } from './Countdown';
 import { Accordion } from './Accordion';
+import { PopUpForm } from './PopUpForm';
 
 
 
 export const HomePage = () => {
-    const { register, handleSubmit, errors } = useForm();
     const [isVideoOpen, setisVideoOpen] = useState(false)
+    const [showModal, setshowModal] = useState(false)
 
 
-    const onSubmit = (data, e) => {
-        emailjs.send("service_ggy36e6", "template_817ivy8", e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });;
-        e.target.reset()
-    }
 
 
 
@@ -32,8 +22,59 @@ export const HomePage = () => {
 
 
     return (
-        <div className="overflow-x-hidden overflow-y-hidden  ">
-            <div> <Countdown />
+        <div className={`overflow-x-hidden overflow-y-hidden `} >
+
+
+
+            {showModal ? (
+                <>
+                    <div
+                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+
+                    >
+                        <div className="relative w-11/12  md:w-1/2 my-6 mx-auto h-3/4">
+                            {/*content*/}
+                            <div className="border-0 mt-6  rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                {/*header*/}
+                                <div className="flex items-start justify-between px-5 py-1  border-b border-solid border-gray-300 rounded-t">
+                                    <h3 className="text-3xl font-semibold">
+                                        Registeration Form
+                  </h3>
+                                    <button
+                                        className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                                        onClick={() => setshowModal(false)}
+                                    >
+                                        <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                                            ×
+                    </span>
+                                    </button>
+                                </div>
+                                {/*body*/}
+                                <div className="relative px-2 flex-auto">
+                                    <p className=" my-1 text-gray-600 text-lg leading-relaxed">
+                                        <PopUpForm setshowModal={setshowModal} />
+                                    </p>
+                                </div>
+                                {/*footer*/}
+                                <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+                </>
+            ) : null}
+
+
+
+
+
+
+
+            <div className={!showModal ? "visible " : "invisible"} >
+
+                <Countdown />
             </div>
             <h2>
                 <span id="main"> &nbsp; </span>
@@ -51,10 +92,10 @@ export const HomePage = () => {
                             You just need a new startup plan- we’ll show you how!
                      </p>
                         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                            <div data-aos="fade-right" className="rounded-md shadow">
-                                <a href="#form" className="w-full rounded flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                            <div data-aos="fade-right" className="rounded-md shadow" style={{ transition: "all .15s ease" }} onClick={() => { setshowModal(true) }}>
+                                <button className="w-full rounded flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
                                     ✔ Book Now
-                             </a>
+                             </button>
                             </div>
                             <div data-aos="fade-left" className="mt-3 sm:mt-0 sm:ml-3" onClick={() => {
                                 setisVideoOpen(true)
@@ -159,15 +200,17 @@ export const HomePage = () => {
                         <iframe width="100%" title="video" height="350" src="https://www.youtube.com/embed/4eWF2nftXsE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></center>
 
                 </div>
-
-
-
-                <div data-aos="fade-right" className=" my-12 px-8 py-3 mx-auto  m-auto rounded m-auto  items-center  px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 w-11/12 ">
-                    <center>     <a href="#form" className=" ">
-                        Yes! the video was awesome,<br />
+                <div className="mt-5 sm:mt-8  sm:flex sm:justify-center lg:justify-start">
+                    <div data-aos="fade-right" className="rounded-md m-auto shadow" style={{ transition: "all .15s ease" }} onClick={() => { setshowModal(true) }}>
+                        <button className="w-full rounded m-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                            <center>
+                                Yes! the video was awesome,<br />
                         I want to register😊
-                             </a></center>
+                             </center>
+                        </button>
+                    </div>
                 </div>
+
 
                 <Accordion />
 
@@ -206,11 +249,17 @@ export const HomePage = () => {
 
                 </div>
 
-                <div data-aos="fade-right" className=" my-12  mx-auto  m-auto rounded m-auto  items-center  px-8 py-3 border border-transparent text-base font-medium  text-white  hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 inline ">
-                    <center>     <a href="#form" className="bg-indigo-800 px-8 py-3 rounded-md">
-                        Book my Slot 💯
-                             </a></center>
+
+                <div className="mt-5 sm:mt-8  sm:flex sm:justify-center lg:justify-start">
+                    <div data-aos="fade-right" className="rounded-md m-auto shadow" style={{ transition: "all .15s ease" }} onClick={() => { setshowModal(true) }}>
+                        <button className="w-full rounded m-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                            <center>
+                                Book my Slot 💯
+                             </center>
+                        </button>
+                    </div>
                 </div>
+
 
                 <center className="w-full m-auto  md:leading-loose my-12">
 
@@ -238,11 +287,7 @@ export const HomePage = () => {
                 </center>
 
 
-                <div data-aos="fade-right" className=" my-12 px-8 py-3 mx-auto  m-auto ">
-                    <center>     <a href="#form" className=" rounded m-auto  items-center  px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                        ✔  Register Now
-                             </a></center>
-                </div>
+
 
                 <div className="my-12">
 
@@ -253,7 +298,7 @@ export const HomePage = () => {
                         <div data-aos-duration="1000" data-aos="flip-up" className="xl:w-1/3 md:w-1/2 p-4">
                             <div className="border border-gray-300 p-6 rounded-lg">
                                 <div className="w-10 ring-offset-4 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4"> 1 </div>
-                                <h2 className="text-lg  font-medium title-font mb-2">Filling The Forum</h2>
+                                <span className="text-lg   font-medium title-font mb-2">Filling The Forum</span>
                                 <p className="leading-relaxed text-base">We first need you to fill the forum below so We can get an overview about you .</p>
 
                                 <div className="text-center mt-2 leading-none flex justify-between w-full">
@@ -261,10 +306,10 @@ export const HomePage = () => {
                                         <svg className=" fill-current w-4 h-4 mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" /></svg>
                   2 sec
                 </span>
-                                    <a href="#form" className=" inline-flex items-center pointer leading-none text-sm">
+                                    <div onClick={() => {setshowModal(true)}} className=" inline-flex items-center pointer leading-none text-sm">
                                         <FcAcceptDatabase className="inline" />
                     Form Link
-                </a>
+                </div>
 
                                 </div>
 
@@ -275,8 +320,8 @@ export const HomePage = () => {
                             <div className="border border-gray-300 p-6 rounded-lg">
                                 <div className="w-10 ring-offset-4 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
                                     2
-              </div>
-                                <h2 className="text-lg  font-medium title-font mb-2">Click on the register button</h2>
+                                 </div>
+                                <span className="text-lg  font-medium title-font mb-2">Click on the register button</span>
                                 <p className="leading-relaxed text-base">So that we can enroll you in our system to share further details.</p>
 
                                 <div className="text-center mt-2 leading-none flex justify-between w-full">
@@ -293,7 +338,7 @@ export const HomePage = () => {
                                 <div className="w-10 ring-offset-4 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                     3
               </div>
-                                <h2 className="text-lg  font-medium title-font mb-2">Congratulations</h2>
+                                <span className="text-lg  font-medium title-font mb-2">Congratulations</span>
                                 <p className="leading-relaxed text-base">Congratulations you have been  registered successfully. Your mail in our records.
                 Stay in touch with your mail ID.We'll share the details there.</p>
 
@@ -313,10 +358,16 @@ export const HomePage = () => {
                     <div data-aos="zoom-in" data-aos-duration="2000" className="font-bold text-center text-lg  ">    IT HARDLY TAKES 60 SECONDS, DON’T MISS IT</div>
                 </div>
 
-                <div data-aos="fade-right" className=" my-12 px-8 py-3 mx-auto rounded m-auto  items-center  px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 w-9/12  m-auto ">
-                    <a href="#form" className="  ">
-                        <center>  ✔   Excited & want to Register🤩</center>
-                    </a>
+
+
+                <div className="mt-5 sm:mt-8  sm:flex sm:justify-center lg:justify-start">
+                    <div data-aos="fade-right" className="rounded-md m-auto shadow" style={{ transition: "all .15s ease" }} onClick={() => { setshowModal(true) }}>
+                        <button className="w-full rounded m-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-800 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                            <center>
+                                ✔   Excited & want to Register🤩
+                             </center>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="my-6">
@@ -398,40 +449,8 @@ export const HomePage = () => {
                 <span id="form"> &nbsp; </span>
 
             </h2>
-            <form id="form" className=" m-auto my-8" onSubmit={handleSubmit(onSubmit)}>
-                <div data-aos-duration="1000" data-aos="fade-up" className="md:w-1/2 w-11/12 m-auto">
-                    <div>
-                        <span className="uppercase text-sm text-gray-600 font-bold">Full Name</span>
-                        <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" placeholder="" name="from_name" ref={register({ required: true })} />
-                        {errors.from_name && errors.from_name.type === "required" && <span class="error">This is required</span>}
-                    </div>
-                    <div className="mt-8">
-                        <span className="uppercase text-sm text-gray-600 font-bold">Email</span>
-                        <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" name="to_name" ref={register({ required: true ,  pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                        })} />
-                        {errors.to_name && errors.to_name.type === "required" && (<span  class="error" >This is required</span>)}
-                        {errors.to_name && errors.to_name.type === "pattern" && (<span  class="error" >Invalid Email</span>)}
-                    </div>
-                    <div className="mt-8">
-                        <span className="uppercase text-sm text-gray-600 font-bold">Phone No.</span>
-                        <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="number" name="phoneNo" ref={register({ required: true, maxLength: 11, minLength: 10 })} />
-                        {errors.phoneNo && errors.phoneNo.type === "required" && <span class="error">This is required</span>}
-                        {errors.phoneNo && errors.phoneNo.type === "maxLength" && <span class="error">Invalid No.</span>}
-                        {errors.phoneNo && errors.phoneNo.type === "minLength" && <span class="error">Invalid No.</span>}
-                    </div>
-
-                    <div className="mt-8 ">
-                        <button type="submit"
-                            className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                            Register
-                         </button>
-                    </div>
-                </div>
-            </form>
-            <div className="bg-yellow-600 font-seria bg-opacity-25 my-4 text-center p-4 md:w-1/2 md:m-auto font-bold text-white text-lg" >
+            <PopUpForm />
+            <div className="bg-yellow-600 font-seria bg-opacity-25 my-4 text-center p-4 md:w-1/2 md:m-auto font-bold text-white text-lg" style={{ transition: "all .15s ease" }} onClick={() => { setshowModal(true) }}>
                 <p className="p-4">
 
                     LAUNCH your new year with the most effective sucess coaching program which is now FREE to everyone coutesy of ACE PROFESSIONALS
@@ -456,7 +475,7 @@ export const HomePage = () => {
                             <li className="m-2 p-2 text-2xl"> <a href="https://twitter.com/pro_aces"><FiTwitter className="text-white" /></a></li>
                             <li className="m-2 p-2 text-2xl"> <a href="https://www.youtube.com/channel/UCSfUb50DjPGLYXS-PKOK6XA"> <FiYoutube className="text-white" /></a></li>
                         </ul>
-                        <div className="block text-lg">Copyright © 2020 Ace Professionals Business Solutions </div>
+                        <div className="block text-lg">Copyright © 2020 Ace Professionals Business Solutions Company </div>
                     </div>
 
                 </div>
@@ -471,7 +490,7 @@ export const HomePage = () => {
             %0We%20will%20get%20back%20to%20you%20shortly!
             %0Please%20leave%20your%20message... 
             %0Namaste🙏🏻">
-                <div className="fixed bottom-0 md:hidden flex z-50 justify-end mx-12" style={{ right: "-10%", bottom: "5%" }}>
+                <div className={`fixed bottom-0 md:hidden flex z-50 justify-end mx-12 ${!showModal ? "visible " : "invisible"}`} style={{ right: "-10%", bottom: "5%" }}>
 
 
                     <svg width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.94 36.666l-.065-.113A23.322 23.322 0 011.761 24.89C1.766 12.027 12.236 1.562 25.098 1.562c6.24.002 12.103 2.432 16.508 6.842a23.2 23.2 0 016.831 16.505C48.431 37.774 37.963 48.24 25.1 48.24A23.39 23.39 0 0113.937 45.4l-.109-.06-12.134 3.182L4.94 36.666z" fill="#F2FAFF"></path><path d="M25.098 1.875c6.156.002 11.94 2.399 16.287 6.75a22.891 22.891 0 016.74 16.284c-.006 12.692-10.335 23.018-23.034 23.018a23.064 23.064 0 01-11.004-2.801l-.218-.12-.24.064-11.49 3.013 3.068-11.209.07-.252-.131-.226A23.007 23.007 0 012.072 24.89C2.08 12.2 12.408 1.875 25.099 1.875zm0-.625c-13.034 0-23.644 10.606-23.65 23.64a23.58 23.58 0 003.156 11.82L1.25 48.961l12.537-3.288a23.633 23.633 0 0011.303 2.878h.01c13.034 0 23.644-10.606 23.65-23.642a23.513 23.513 0 00-6.923-16.727c-4.465-4.47-10.402-6.931-16.729-6.933z" fill="#788B9C"></path><path d="M24.994 43.75a18.773 18.773 0 01-8.958-2.279l-1.792-.977-1.974.517-4.051 1.062 1.037-3.788.566-2.07-1.073-1.859a18.726 18.726 0 01-2.499-9.365c.004-10.333 8.415-18.74 18.748-18.741a18.635 18.635 0 0113.263 5.496 18.642 18.642 0 015.489 13.26c-.005 10.336-8.416 18.744-18.756 18.744z" fill="#79BA7E"></path><path d="M35.35 29.61c-.562-.28-3.325-1.641-3.839-1.828-.515-.188-.89-.28-1.264.281-.375.563-1.451 1.828-1.778 2.202-.328.374-.655.421-1.218.141-.562-.28-2.373-.875-4.518-2.788-1.672-1.49-2.8-3.33-3.126-3.892-.328-.563-.036-.866.246-1.147.252-.252.563-.657.843-.984.28-.328.375-.563.563-.938.188-.374.094-.703-.047-.984-.141-.28-1.264-3.047-1.733-4.17-.456-1.095-.92-.947-1.265-.964a21.778 21.778 0 00-1.076-.019c-.374 0-.984.141-1.498.704-.514.562-1.967 1.921-1.967 4.686 0 2.765 2.014 5.437 2.294 5.811.281.375 3.962 6.049 9.6 8.482 1.34.578 2.389.924 3.204 1.184 1.345.427 2.57.367 3.54.222 1.08-.162 3.325-1.359 3.791-2.67.47-1.313.47-2.438.328-2.672-.142-.235-.517-.376-1.08-.657z" fill="#fff"></path></svg>
