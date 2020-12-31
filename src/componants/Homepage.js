@@ -79,7 +79,7 @@ export const HomePage = () => {
 
             </h2>
             <div className="   text-gray-800    md:w-10/12 w-full m-auto" style={{ marginTop: "8rem" }}>
-                <main id="main" className=" h-screen md:h-auto md:h-5/6 flex flex-col md:flex-row  mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6  lg:mt-20 lg:px-8 xl:mt-28 " style={{ height: "37rem" }}>
+                <main id="main" className=" h-screen  md:h-auto md:h-5/6 flex flex-col md:flex-row  mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6  lg:mt-20 lg:px-8 xl:mt-28 " style={{ height: "37rem" }}>
                     <div className="sm:text-center  p-3 lg:text-left"  >
                         <h1 data-aos-duration="1000" data-aos="fade-up" className="text-4xl tracking-tight font-bold  text-gray-900 sm:text-5xl md:text-6xl">
                             <span className="block xl:inline "> Welcome to</span>
@@ -107,8 +107,8 @@ export const HomePage = () => {
                     <div data-aos="flip-left"
                         data-aos-duration="1500"
                         data-aos-easing="ease-out-cubic"
-                        className=" mt-4 md:mt-0 md:w-1/2 mx-auto   rounded">
-                        <img className=" w-1/2 md:w-9/12 p-4 m-auto" src={process.env.PUBLIC_URL + "/AceLogo.jpg"} alt="Logo" />
+                        className=" mt-4 md:mt-0 md:w-1/2 mx-auto   p-6 md:p-4  rounded">
+                        <img className=" w-1/2 md:w-9/12 p-6 md:p-4 m-auto" src={process.env.PUBLIC_URL + "/AceLogo.jpg"} alt="Logo" />
                     </div>
                 </main>
                 <div className="mt-12">
