@@ -42,7 +42,7 @@ export const AccordionPage = () => {
                 WHAT KIND OF BUSINESS MODEL ACE PROVIDES?{quetwo ? <FcExpand className="inline" /> : <FcCollapse className="inline" />}
                 </div>
                          <div className={`accordion-item ${quethree ? 'collapsed' : 'expanded'}`}  >
-                       No worries, anyone can learn anything on this earth, we have business experts who early belongs to engineering & medical professions  but Now they are doing very well.👍🏻
+                         AT ACE, you will meet with a combination of two models , an asset light & franchisee model that is called HYBRID BUSINESS MODEL.✌🏻
                         </div>
             </div>
 

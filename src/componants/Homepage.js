@@ -79,7 +79,7 @@ export const HomePage = () => {
 
             </h2>
             <div className="   text-gray-800    md:w-10/12 w-full m-auto" style={{ marginTop: "8rem" }}>
-                <main id="main" className=" md:h-5/6 flex flex-col md:flex-row  mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6  lg:mt-20 lg:px-8 xl:mt-28 " style={{ height: "37rem" }}>
+                <main id="main" className=" h-screen md:h-auto md:h-5/6 flex flex-col md:flex-row  mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6  lg:mt-20 lg:px-8 xl:mt-28 " style={{ height: "37rem" }}>
                     <div className="sm:text-center  p-3 lg:text-left"  >
                         <h1 data-aos-duration="1000" data-aos="fade-up" className="text-4xl tracking-tight font-bold  text-gray-900 sm:text-5xl md:text-6xl">
                             <span className="block xl:inline "> Welcome to</span>
@@ -87,7 +87,7 @@ export const HomePage = () => {
                         </h1>
                         <p data-aos-duration="1000" data-aos="fade-up" className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                             It doesn’t takes luck or money to succeed,<br />
-                            You just need a new startup plan- we’ll show you how!
+                            You just need a new startup plan <br />- We’ll show you how!
                      </p>
                         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                             <div data-aos="fade-right" className="rounded-md shadow" style={{ transition: "all .15s ease" }} onClick={() => { setshowModal(true) }}>
@@ -108,7 +108,7 @@ export const HomePage = () => {
                         data-aos-duration="1500"
                         data-aos-easing="ease-out-cubic"
                         className=" mt-4 md:mt-0 md:w-1/2 mx-auto   rounded">
-                        <img className=" w-1/2 md:w-9/12  m-auto" src={process.env.PUBLIC_URL + "/AceLogo.jpg"} alt="Logo" />
+                        <img className=" w-1/2 md:w-9/12 p-4 m-auto" src={process.env.PUBLIC_URL + "/AceLogo.jpg"} alt="Logo" />
                     </div>
                 </main>
                 <div className="mt-12">
@@ -120,7 +120,7 @@ export const HomePage = () => {
                         <li>  <div data-aos-duration="1000" data-aos="fade-up-right" className="flex justify-between px-2 py-2 hover:bg-blue-100 rounded">
                             <p className="flex  text-gray-700">
 
-                                A New profession startup with low investment?
+                                A New professional startup with low investment?
       </p>
                         </div></li>
                         <li> <div data-aos-duration="1000" data-aos="fade-up-left" className="flex justify-between px-2 py-2 hover:bg-blue-100 rounded">
@@ -132,7 +132,7 @@ export const HomePage = () => {
                         <li>  <div data-aos-duration="1000" data-aos="fade-up-right" className="flex justify-between px-2 py-2 hover:bg-blue-100 rounded">
                             <p className="flex text-gray-700">
 
-                                Backup income source income source for  your pasion & living ?
+                                Backup income source for  your pasion & living ?
       </p>
                         </div></li>
                         <li>   <div data-aos-duration="1000" data-aos="fade-up-left" className="flex justify-between px-2 py-2 hover:bg-blue-100 rounded">
@@ -230,18 +230,18 @@ export const HomePage = () => {
                     <ul className=" rounded-lg m-4 text-blue-800">
 
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg">
-                            <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div> Exact way to earn income  that fits best for your financial goals.</div></div>
+                            <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div> Exact way to earn income,  that fits best for your financial goals.</div></div>
                         </li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg">
                             <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How to kick start a micro entrepreneurship with aces</div></div> </li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg">
                             <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Real truth & myths of business world.</div></div></li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg">
-                            <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How to start earn within next 30 days with Ace.</div></div></li>
+                            <div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How to start earning in next 30 days with Ace.</div></div></li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>To operate everything with our Special management system.</div></div></li>
-                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Exactly the ground-level start to high level income.</div></div></li>
+                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Exactly from the ground-level  to high level income.</div></div></li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Handholding support & system that can help.</div></div></li>
-                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How you run and operate everything very smoothly.</div></div></li>
+                        <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>How you can run and operate everything very smoothly.</div></div></li>
                         <li data-aos-duration="1000" data-aos="flip-up" className="mb-1 w-fill flex p-3 pl-3 bg-gray-100 hover:bg-gray-200 rounded-lg"><div className="flex"><div className="md:mt-1 md:m-auto list_icon px-1">  <FcCheckmark /> </div><div>Discover a FREE bonus specially designed for your growth.</div></div></li>
                     </ul>
 
@@ -272,9 +272,9 @@ export const HomePage = () => {
                                 DISCLAIMER:-
                            </span>
 
-                            <span className="block text-lg">  <span className="font-bold "> 60 MINUTES</span> on Netflix, time flies lets watch another one but <span className="font-bold "> 60 MINUTES</span> to learn new business & skill, I wish I had a time</span>
+                            <span className="block text-lg">  <span className="font-bold "> 60 MINUTES</span> on Netflix & time flies, lets watch another one but <span className="font-bold "> 60 MINUTES</span> to learn new business & skills, I wish I had a time</span>
 
-                            <span className="block text-lg">    Choose wisely because what are you will determine your tomorrow</span>
+                            <span className="block text-lg">    Choose wisely because what you'll do today will determine your tomorrow.</span>
 
                             <span className="block text-lg">   <span className="font-bold ">  WE ARE NOT SELLING ANYTHING TO YOU</span>, it's chance to get something better</span>
 
@@ -296,7 +296,7 @@ export const HomePage = () => {
                         <div data-aos-duration="1000" data-aos="flip-up" className="xl:w-1/3 md:w-1/2 p-4">
                             <div className="border border-gray-300 p-6 rounded-lg">
                                 <div className="w-10 ring-offset-4 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4"> 1 </div>
-                                <span className="text-lg   font-medium title-font mb-2">Filling The Forum</span>
+                                <span className="text-lg   font-medium title-font mb-2">Filling The Form</span>
                                 <p className="leading-relaxed text-base">We first need you to fill the forum below so We can get an overview about you .</p>
 
                                 <div className="text-center mt-2 leading-none flex justify-between w-full">
@@ -337,7 +337,7 @@ export const HomePage = () => {
                                     3
               </div>
                                 <span className="text-lg  font-medium title-font mb-2">Congratulations</span>
-                                <p className="leading-relaxed text-base">Congratulations you have been  registered successfully. Your mail in our records.
+                                <p className="leading-relaxed text-base">Congratulations you have been  registered successfully your mail in our records.
                 Stay in touch with your mail ID.We'll share the details there.</p>
 
                                 <div className="text-center mt-2 leading-none flex justify-between w-full">
@@ -381,13 +381,13 @@ export const HomePage = () => {
 
                         <ul className="  list-disc md:w-1/2 w-10/12 m-auto text-blue-800">
                             <li data-aos="flip-left" data-aos-duration="1000" >Straightforward  <span className="font-bold ">Micro entrepreneurship </span>Plan.   </li>
-                            <li data-aos="flip-right" data-aos-duration="1000"> <span className="font-bold ">Video+</span> post marketing Ads for  <span className="font-bold ">National & International region</span></li>
+                            <li data-aos="flip-right" data-aos-duration="1000"> <span className="font-bold ">Video+</span> post marketing Ads for  <span className="font-bold ">National & International regions</span></li>
                             <li data-aos="flip-left" data-aos-duration="1000"> <span className="font-bold ">frameworks, process manuals,</span></li>
                             <li data-aos="flip-right" data-aos-duration="1000">SOP’s, documents, <span className="font-bold ">letterheads</span>+</li>
                             <li data-aos="flip-left" data-aos-duration="1000">Group Discussions, <span className="font-bold ">strategy sheets,</span> </li>
                             <li data-aos="flip-right" data-aos-duration="1000">Feedback forms, <span className="font-bold ">tracker</span> tools.</li>
                             <li data-aos="flip-left" data-aos-duration="1000"><span className="font-bold ">Email</span> marketing support+ <span className="font-bold ">lead</span> management</li>
-                            <li data-aos="flip-right" data-aos-duration="1000">Financial & Productivity<span className="font-bold ">planner</span> </li>
+                            <li data-aos="flip-right" data-aos-duration="1000">Financial & Productivity <span className="font-bold ">planner</span> </li>
                             <li data-aos="flip-left" data-aos-duration="1000">Grab 21st century’s top <span className="font-bold ">High Income Skills</span>.</li>
                             <li data-aos="flip-right" data-aos-duration="1000">Digital <span className="font-bold ">web+ app</span> Access </li>
                             <li data-aos="flip-left" data-aos-duration="1000"><span className="font-bold ">Promotions</span> for lead generation</li>
@@ -401,7 +401,7 @@ export const HomePage = () => {
                             <span className="block">21 DAYS CARREER & SKILLS RELATED SHOWS</span>
                         </div>
                         <div>
-                            Or you can Watch live <del className="text-2xl">@500</del> <span className="text-2xl glow">@99</span>   only as much you want.
+                            Or you can Watch live <del className="text-2xl">@500</del> <span className="text-2xl glow">@99</span>   only.
                             </div>
                         <u> <a href="#form"> No Thanks, I Only want free webinar.</a></u>
 
@@ -409,7 +409,7 @@ export const HomePage = () => {
                             <div className="text-center animate-bounce text-lg m-0 ">The ACEFLIX Shows 👇🏻 </div>
                             <div className="flex flex-wrap m-4">
 
-                                <div className="text-teal-900 my-4 mx-auto bg-teal-200 py-3 px-6 rounded">
+                                <div className="text-teal-900  my-4 mx-auto bg-teal-200 py-3 px-6 rounded">
                                     <p>Personality pro 👋<br />
                     ALPHA MEN & WOMEN<br />
 
@@ -451,7 +451,7 @@ export const HomePage = () => {
             <div className="bg-yellow-600 font-seria bg-opacity-25 my-4 text-center p-4 md:w-1/2 md:m-auto font-bold text-white text-lg" style={{ transition: "all .15s ease" }} onClick={() => { setshowModal(true) }}>
                 <p className="p-4">
 
-                    LAUNCH your new year with the most effective sucess coaching program which is now FREE to everyone coutesy of ACE PROFESSIONALS
+                    LAUNCH your new year with the most effective success  coaching program which is now FREE for everyone courtesy of ACE PROFESSIONALS
 </p>
 
                 <a href="#form" className="bg-black inline-block text-yellow-600 p-4 font-bold rounded-lg ">RESERVE YOUR SPOT NOW
@@ -484,7 +484,7 @@ export const HomePage = () => {
 
 
 
-        
+
             <a href="https://api.whatsapp.com/send?phone=+918351023981&text=Thank%20you%20for%20contacting%20Ace%20Professionals%20😄
             %20We%20will%20get%20back%20to%20you%20shortly!
             %20Please%20leave%20your%20message... 
