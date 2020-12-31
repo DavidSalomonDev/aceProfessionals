@@ -132,7 +132,7 @@ export const HomePage = () => {
                         <li>  <div data-aos-duration="1000" data-aos="fade-up-right" className="flex justify-between px-2 py-2 hover:bg-blue-100 rounded">
                             <p className="flex text-gray-700">
 
-                                Backup income source for  your pasion & living ?
+                                Backup income source for  your passion & living ?
       </p>
                         </div></li>
                         <li>   <div data-aos-duration="1000" data-aos="fade-up-left" className="flex justify-between px-2 py-2 hover:bg-blue-100 rounded">
@@ -395,10 +395,10 @@ export const HomePage = () => {
                     </div>
                     <div data-aos="flip-down" data-aos-duration="1000" className="max-w-6xl mx-auto sm:px-6 py-4  bg-gray-900 text-gray-100 rounded-lg px-6">
                         <span className="glow block  text-4xl">FREE</span>
-                        <div className="md:text-center font-bold text-1xl"> For webinar attendee’s,<br />
+                        <div className="text-center font-bold text-1xl"> For webinar attendee’s,<br />
                             <span className="text-4xl animate-ping color_red" >ACEFLIX</span>     <br />
                             IS A FREE BONUS…
-                            <span className="block">21 DAYS CARREER & SKILLS RELATED SHOWS</span>
+                            <span className="block py-2">21 DAYS CARRER & SKILLS RELATED SHOWS</span>
                         </div>
                         <div>
                             Or you can Watch live <del className="text-2xl">@500</del> <span className="text-2xl glow">@99</span>   only.
