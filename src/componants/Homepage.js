@@ -296,7 +296,7 @@ export const HomePage = () => {
                         <div data-aos-duration="1000" data-aos="flip-up" className="xl:w-1/3 md:w-1/2 p-4">
                             <div className="border border-gray-300 p-6 rounded-lg">
                                 <div className="w-10 ring-offset-4 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4"> 1 </div>
-                                <span className="text-lg   font-medium title-font mb-2">Filling The Form</span>
+                                <span className="md:text-lg   font-medium title-font mb-2">Filling The Form</span>
                                 <p className="leading-relaxed text-base">We first need you to fill the forum below so We can get an overview about you .</p>
 
                                 <div className="text-center mt-2 leading-none flex justify-between w-full">
@@ -319,7 +319,7 @@ export const HomePage = () => {
                                 <div className="w-10 ring-offset-4 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
                                     2
                                  </div>
-                                <span className="text-lg  font-medium title-font mb-2">Click on the register button</span>
+                                <span className="md:text-lg  font-medium title-font ">Click on the register button</span>
                                 <p className="leading-relaxed text-base">So that we can enroll you in our system to share further details.</p>
 
                                 <div className="text-center mt-2 leading-none flex justify-between w-full">
@@ -336,7 +336,7 @@ export const HomePage = () => {
                                 <div className="w-10 ring-offset-4 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                     3
               </div>
-                                <span className="text-lg  font-medium title-font mb-2">Congratulations</span>
+                                <span className="md:text-lg  font-medium title-font mb-2">Congratulations</span>
                                 <p className="leading-relaxed text-base">Congratulations you have been  registered successfully your mail in our records.
                 Stay in touch with your mail ID.We'll share the details there.</p>
 
@@ -398,9 +398,9 @@ export const HomePage = () => {
                         <div className="text-center font-bold text-1xl"> For webinar attendee’s,<br />
                             <span className="text-4xl animate-ping color_red" >ACEFLIX</span>     <br />
                             IS A FREE BONUS…
-                            <span className="block py-2">21 DAYS CARRER & SKILLS RELATED SHOWS</span>
+                            <span className="block py-2">21 DAYS  CAREER & SKILLS RELATED SHOWS</span>
                         </div>
-                        <div>
+                        <div className="text-center" >
                             Or you can Watch live <del className="text-2xl">@500</del> <span className="text-2xl glow">@99</span>   only.
                             </div>
                         <u> <a href="#form"> No Thanks, I Only want free webinar.</a></u>
