@@ -5,6 +5,14 @@ import "./index.css";
 import Aos from 'aos'
 import "aos/dist/aos.css"
 import { HomePage } from "./componants/Homepage";
+import { UserData } from "./componants/UserData";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 function App() {
 
 useEffect(() => {
@@ -15,8 +23,14 @@ useEffect(() => {
 
 
   return (
+
     <div className="App">
-    <HomePage/>
+     <Router>
+     <Route path="/" exact component={HomePage}/> 
+     <Route path="/user"  component={UserData}/> 
+
+    
+     </Router>
     </div>
   );
 }
