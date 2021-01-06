@@ -8,9 +8,7 @@ import { HomePage } from "./componants/Homepage";
 import { UserData } from "./componants/UserData";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 function App() {
