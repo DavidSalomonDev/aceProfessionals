@@ -5,16 +5,16 @@ import emailjs from 'emailjs-com';
 
 export const PopUpForm = (props) => {
     const { register, handleSubmit, errors } = useForm();
-
+const setModal=()=> {props.setshowModal(false)}
     const onSubmit = (data, e) => {
-        emailjs.send("service_ggy36e6", "template_817ivy8", e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
+        emailjs.sendForm("service_ggy36e6","template_817ivy8" ,e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
-            });;
+            });
         e.target.reset()
-        props.setshowModal(false)
+        setModal()
         
     }
 
