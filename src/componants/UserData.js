@@ -17,25 +17,35 @@ export const UserData = () => {
 
 
     return (
-        <div>
-            <div class="md:px-32 py-8 w-full">
-                <div class="shadow overflow-hidden rounded border-b border-gray-200">
-                    <table class="min-w-full bg-white">
-                        <thead class="bg-gray-800 text-white">
+        <div classNameName="overflow-auto">
+            <div classNameName="md:px-32 py-8 m-4 flex items-center justify-center">
+                <div classNameName="shadow container rounded border-b border-gray-200">
+                    <table className="border-collapse w-full">
+                        <thead>
                             <tr>
-                                <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Name</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Phone No.</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Status</th>
 
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Email</th>
                             </tr>
                         </thead>
-                        <tbody class="text-gray-700">
+
+                        <tbody className="flex-1 sm:flex-none">
                             {Object.keys(list).map(data => {
                                 return (
-                                    <tr>
-                                        <td class="w-1/3 text-left py-3 px-4">{list[data].from_name}</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href={`tel:${list[data].phoneNo}`}>{list[data].phoneNo}</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href={`{mailto:${list[data].to_name}}`}>{list[data].to_name}</a></td>
+                                    <tr className="flex flex-col flex-no wrap sm:table-row mb-4 sm:mb-0 bg-gray-200">
+                                        <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                                            <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Name</span>
+                                            {list[data].from_name}
+                                        </td>
+                                        <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                                            <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Phone No.</span>
+                                            <a classNameName="hover:text-blue-500" href={`tel:${list[data].phoneNo}`}>{list[data].phoneNo}</a>
+                                        </td>
+                                        <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                                            <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Email</span>
+                                            <a classNameName="hover:text-blue-500" href={`mailto:${list[data].to_name}`}>{list[data].to_name}</a>
+                                        </td>
                                     </tr>
                                 )
                             })}
@@ -43,6 +53,6 @@ export const UserData = () => {
                     </table>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

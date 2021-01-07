@@ -49,7 +49,7 @@ export const HomePage = () => {
                                     </button>
                                 </div>
                                 {/*body*/}
-                                <div className="relative  my-1 text-gray-600 text-lg leading-relaxed px-2 flex-auto">
+                                <div className="relative  my-1 text-gray-600 text-lg leading-relaxed px-2 flex-auto " data-aos="fade-up">
                                     <PopUpForm setshowModal={setshowModal} />
                                 </div>
                                 {/*footer*/}
