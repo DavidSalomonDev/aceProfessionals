@@ -33,15 +33,15 @@ export const PopUpForm = (props) => {
 
 
     const onSubmit = (data, e) => {
-        // firebaseDb.database().ref('message').push(data)
+        firebaseDb.database().ref('message').push(data)
         playFile('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3');
 
-        // emailjs.sendForm("service_ggy36e6","template_817ivy8" ,e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
+        emailjs.sendForm("service_ggy36e6","template_817ivy8" ,e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
         e.target.reset()
 
         setShowAlert(true);
