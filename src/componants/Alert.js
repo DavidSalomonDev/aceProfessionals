@@ -18,19 +18,19 @@ const Alert = () => {
 
                 </span>
 
-                
+
 
                 <div className="inline-block align-middle mr-8">
-                We appreciate you contacting us <br/>
-                    We’ve sent you an email  at the email address you provided.<br />
-                     Please enjoy, and let us know if there’s anything else we can help you with.<br />
+                    We appreciate you contacting us <br />
+                    For further details stay in touch with your mail ID.<br />
+                     And let us know if there’s anything else we can help you with.<br />
 
-                     <span className="inline-block my-4  ">
-                    - ACE PROFESSIONALS Team
+                    <span className="inline-block my-4  ">
+                        -Team ACE PROFESSIONALS
 
                 </span>
 
-                    </div>
+                </div>
             </div>
 
         </>

@@ -19,7 +19,6 @@ export const HomePage = () => {
 
 
 
-
     return (
         <div className={`overflow-x-hidden overflow-y-hidden `} >
 
@@ -50,7 +49,7 @@ export const HomePage = () => {
                                 </div>
                                 {/*body*/}
                                 <div className="relative  my-1 text-gray-600 text-lg leading-relaxed px-2 flex-auto " data-aos="fade-up">
-                                    <PopUpForm setshowModal={setshowModal} />
+                                    <PopUpForm setshowModal={setshowModal}  />
                                 </div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
@@ -484,10 +483,7 @@ export const HomePage = () => {
 
 
 
-            <a href="https://api.whatsapp.com/send?phone=+918351023981&text=Thank%20you%20for%20contacting%20Ace%20Professionals%20😄
-            %20We%20will%20get%20back%20to%20you%20shortly!
-            %20Please%20leave%20your%20message... 
-            %20Namaste🙏🏻&source=&data=">
+            <a href="https://api.whatsapp.com/send?phone=+918351023981&text=I'm%20intrested%20to%20know%20more%20about%20this%20and%20I%20have%20few%20questions.%20Can%20you%20help?&source=&data=">
 
 
 
