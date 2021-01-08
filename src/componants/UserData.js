@@ -18,6 +18,9 @@ export const UserData = () => {
 
     return (
         <div classNameName="overflow-auto">
+            <div className="text-green-900  text-center my-4 mx-auto bg-green-200 py-3 px-6 rounded">
+                                   User Data
+                                </div>
             <div classNameName="md:px-32 py-8 m-4 flex items-center justify-center">
                 <div classNameName="shadow container rounded border-b border-gray-200">
                     <table className="border-collapse w-full">
@@ -33,7 +36,7 @@ export const UserData = () => {
                         <tbody className="flex-1 sm:flex-none">
                             {Object.keys(list).map(data => {
                                 return (
-                                    <tr className="flex flex-col flex-no wrap sm:table-row mb-4 sm:mb-0 bg-gray-200">
+                                    <tr className="flex flex-col flex-no wrap sm:table-row my-4  bg-gray-200">
                                         <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                                             <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Name</span>
                                             {list[data].from_name}
