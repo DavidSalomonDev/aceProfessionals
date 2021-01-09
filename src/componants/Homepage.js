@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FcCheckmark, FcTodoList, FcAcceptDatabase, FcStart, } from "react-icons/fc";
 import { FiMail, FiFacebook, FiInstagram, FiTwitter, FiYoutube } from 'react-icons/fi';
 import { Countdown } from './Countdown';
@@ -13,7 +13,20 @@ export const HomePage = () => {
 
 
 
+    useEffect(() => {
+        const KEY = "firebase:previous_websocket_failure"
+        function clearItem() {
+            var local = localStorage.getItem(KEY)
+            console.log(local)
+            if (local) {
+                localStorage.removeItem(KEY)
+            }
 
+        }
+        window.addEventListener("storage", clearItem)
+        return () => window.removeEventListener("storage", clearItem)
+
+    }, [])
 
 
 
@@ -49,7 +62,7 @@ export const HomePage = () => {
                                 </div>
                                 {/*body*/}
                                 <div className="relative  my-1 text-gray-600 text-lg leading-relaxed px-2 flex-auto " data-aos="fade-up">
-                                    <PopUpForm setshowModal={setshowModal}  />
+                                    <PopUpForm setshowModal={setshowModal} />
                                 </div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">

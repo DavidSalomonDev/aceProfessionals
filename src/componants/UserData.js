@@ -5,7 +5,9 @@ import firebaseDb from "../firebase"
 
 export const UserData = () => {
     const [list, setList] = useState({})
+
     useEffect(() => {
+
         firebaseDb.database().ref('message').on("value", snapshot => {
             if (snapshot.val() != null) {
                 setList({ ...snapshot.val() })
@@ -13,13 +15,19 @@ export const UserData = () => {
 
         })
 
+
     }, [])
+
+
+
+  
+
 
 
     return (
         <div className="overflow-auto">
             <div className="text-green-900  text-center my-4 mx-auto bg-green-200 py-3 px-6 rounded">
-                                   User Data
+                User Data
                                 </div>
             <div className="md:px-32 py-8 m-4 flex items-center justify-center">
                 <div className="shadow container rounded border-b border-gray-200">
