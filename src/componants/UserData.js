@@ -17,12 +17,12 @@ export const UserData = () => {
 
 
     return (
-        <div classNameName="overflow-auto">
+        <div className="overflow-auto">
             <div className="text-green-900  text-center my-4 mx-auto bg-green-200 py-3 px-6 rounded">
                                    User Data
                                 </div>
-            <div classNameName="md:px-32 py-8 m-4 flex items-center justify-center">
-                <div classNameName="shadow container rounded border-b border-gray-200">
+            <div className="md:px-32 py-8 m-4 flex items-center justify-center">
+                <div className="shadow container rounded border-b border-gray-200">
                     <table className="border-collapse w-full">
                         <thead>
                             <tr>
@@ -43,11 +43,11 @@ export const UserData = () => {
                                         </td>
                                         <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                                             <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Phone No.</span>
-                                            <a classNameName="hover:text-blue-500" href={`tel:${list[data].phoneNo}`}>{list[data].phoneNo}</a>
+                                            <a className="hover:text-blue-500" href={`tel:${list[data].phoneNo}`}>{list[data].phoneNo}</a>
                                         </td>
                                         <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                                             <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Email</span>
-                                            <a classNameName="hover:text-blue-500" href={`mailto:${list[data].to_name}`}>{list[data].to_name}</a>
+                                            <a className="hover:text-blue-500" href={`mailto:${list[data].to_name}`}>{list[data].to_name}</a>
                                         </td>
                                     </tr>
                                 )

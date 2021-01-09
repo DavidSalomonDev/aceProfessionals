@@ -1,13 +1,12 @@
 import firebase from "firebase";
 
 var firebaseConfig = {
-  apiKey: "AIzaSyDB6LzZYT0DjvY8VXHMNH4dBdIUhe2G7v0",
-  authDomain: "landingpage-16d6a.firebaseapp.com",
-  databaseURL: "https://landingpage-16d6a-default-rtdb.firebaseio.com",
-  projectId: "landingpage-16d6a",
-  storageBucket: "landingpage-16d6a.appspot.com",
-  messagingSenderId: "429257041502",
-  appId: "1:429257041502:web:d2b283937cfd31eab636cf"
+  apiKey: "AIzaSyDp_DPPVC1hqS_l_-yyxPfBybuStHzwrH0",
+  authDomain: "landingpage-c6ccb.firebaseapp.com",
+  projectId: "landingpage-c6ccb",
+  storageBucket: "landingpage-c6ccb.appspot.com",
+  messagingSenderId: "926450423031",
+  appId: "1:926450423031:web:ac8e9efa2a44e0ec492ff2"
 };
   // Initialize Firebase
   var firebaseDb= firebase.initializeApp(firebaseConfig);
