@@ -1,29 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import firebaseDb from "../firebase"
+import { getUserData } from '../functions/airtable'
 
 
 
 export const UserData = () => {
-    const [list, setList] = useState({})
-
+    const [list, setList] = useState([])
+    const [error, setError] = useState()
     useEffect(() => {
-
-        firebaseDb.database().ref('message').on("value", snapshot => {
-            if (snapshot.val() != null) {
-                setList({ ...snapshot.val() })
-            }
-
-        })
+        getUserData().then((res) => setList(res)).catch(() => setError(true))
 
 
     }, [])
 
 
 
-  
 
 
 
+    if (!list.length) return <div>Loading</div>
     return (
         <div className="overflow-auto">
             <div className="text-green-900  text-center my-4 mx-auto bg-green-200 py-3 px-6 rounded">
@@ -42,20 +37,20 @@ export const UserData = () => {
                         </thead>
 
                         <tbody className="flex-1 sm:flex-none">
-                            {Object.keys(list).map(data => {
+                            {(list).filter(el => el.name && el.email && el.phone).map(data => {
                                 return (
                                     <tr className="flex flex-col flex-no wrap sm:table-row my-4  bg-gray-200">
                                         <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                                             <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Name</span>
-                                            {list[data].from_name}
+                                            {data.name}
                                         </td>
                                         <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                                             <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Phone No.</span>
-                                            <a className="hover:text-blue-500" href={`tel:${list[data].phoneNo}`}>{list[data].phoneNo}</a>
+                                            <a className="hover:text-blue-500" href={`tel:${data.phone}`}>{data.phone}</a>
                                         </td>
                                         <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                                             <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Email</span>
-                                            <a className="hover:text-blue-500" href={`mailto:${list[data].to_name}`}>{list[data].to_name}</a>
+                                            <a className="hover:text-blue-500" href={`mailto:${data.email}`}>{data.email}</a>
                                         </td>
                                     </tr>
                                 )

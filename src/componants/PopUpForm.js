@@ -1,23 +1,24 @@
-import React ,{useState} from 'react'
+import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
 import emailjs from 'emailjs-com';
 import firebaseDb from "../firebase"
 import Alert from './Alert';
+import { saveUserData } from '../functions/airtable';
 
 export const PopUpForm = (props) => {
 
     var formFilled = localStorage.getItem("Alert")
 
 
-    const [showAlert, setShowAlert] = useState(()=>{
-        if(formFilled){
+    const [showAlert, setShowAlert] = useState(() => {
+        if (formFilled) {
             return formFilled
         }
-        else{
+        else {
             return false
         }
     });
-console.log(alert)
+    console.log(alert)
 
     const { register, handleSubmit, errors } = useForm();
     const setModal = () => { props.setshowModal(false) }
@@ -41,15 +42,15 @@ console.log(alert)
             });
     }
 
-   
-    
+
+
     const onSubmit = (data, e) => {
         e.preventDefault()
         setShowAlert(true);
-        firebaseDb.database().ref('message').push(data)
+        saveUserData({ email: data.to_name, name: data.from_name, phone: data.phoneNo })
         playFile('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3');
 
-        emailjs.sendForm("service_ggy36e6","template_817ivy8" ,e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
+        emailjs.sendForm("service_ggy36e6", "template_817ivy8", e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
