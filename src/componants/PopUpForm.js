@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
 import emailjs from 'emailjs-com';
-import firebaseDb from "../firebase"
 import Alert from './Alert';
 import { saveUserData } from '../functions/airtable';
 

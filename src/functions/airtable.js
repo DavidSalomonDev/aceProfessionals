@@ -24,7 +24,7 @@ export function getUserData() {
             fetchNextPage();
             resolve(data);
         }, function done(err) {
-            if (err) { console.error(err); }
+            if (err) reject(err)
         });
     })
 }

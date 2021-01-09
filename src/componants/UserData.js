@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import firebaseDb from "../firebase"
 import { getUserData } from '../functions/airtable'
 
 
 
 export const UserData = () => {
     const [list, setList] = useState([])
-    const [error, setError] = useState()
+    const [error, setError] = useState(false)
     useEffect(() => {
         getUserData().then((res) => setList(res)).catch(() => setError(true))
-
 
     }, [])
 
 
 
 
-
+    if (error) return <div>Oops, Something Went Wrong!</div>
 
     if (!list.length) return <div>Loading</div>
     return (
