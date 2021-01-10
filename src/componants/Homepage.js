@@ -81,7 +81,7 @@ export const HomePage = () => {
                     <div className="sm:text-center  p-3 lg:text-left"  >
                         <h1 data-aos-duration="1000" data-aos="fade-up" className="text-4xl tracking-tight font-bold  text-gray-900 sm:text-5xl md:text-6xl">
                             <span className="block xl:inline "> Welcome to</span>
-                            <span className="block text-indigo-800 xl:inline">ACE PROFESSIONALS</span>
+                            <span className="block px-2 text-indigo-800 xl:inline">ACE PROFESSIONALS</span>
                         </h1>
                         <p data-aos-duration="1000" data-aos="fade-up" className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                             It doesn’t takes luck or money to succeed,<br />
