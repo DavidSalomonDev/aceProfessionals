@@ -80,7 +80,7 @@ export const HomePage = () => {
                 <main id="main" className=" h-full  md:h-auto md:h-5/6 flex flex-col md:flex-row  mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6  lg:mt-20 lg:px-8 xl:mt-28 " style={{ height: "37rem" }}>
                     <div className="sm:text-center  p-3 lg:text-left"  >
                         <h1 data-aos-duration="1000" data-aos="fade-up" className="text-4xl tracking-tight font-bold  text-gray-900 sm:text-5xl md:text-6xl">
-                            <span className="block xl:inline "> Welcome to</span>
+                            <span className="block xl:inline "> Welcome to </span>
                             <span className="block px-2 text-indigo-800 xl:inline">ACE PROFESSIONALS</span>
                         </h1>
                         <p data-aos-duration="1000" data-aos="fade-up" className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
