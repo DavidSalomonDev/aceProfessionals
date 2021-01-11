@@ -17,7 +17,8 @@ export function getUserData() {
                 const name = record.get('Name');
                 const email = record.get('Email');
                 const phone = record.get('Phone');
-                data.push({ name, email, phone })
+                const instaId = record.get('InstagramName')
+                data.push({ name, email, phone, instaId })
                 console.log(data)
             });
 
@@ -28,13 +29,15 @@ export function getUserData() {
         });
     })
 }
-export const saveUserData = ({ name, email, phone }) => {
+export const saveUserData = ({ name, email, phone, instaId }) => {
     base('Data').create([
         {
             "fields": {
                 "Name": name,
                 "Email": email,
-                "Phone": phone
+                "Phone": phone,
+                "InstagramName": instaId
+
             }
         },
     ], function (err, records) {

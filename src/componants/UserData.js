@@ -29,13 +29,14 @@ export const UserData = () => {
                             <tr>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Name</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Phone No.</th>
-                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Status</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Email</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Instagram Id</th>
 
                             </tr>
                         </thead>
 
                         <tbody className="flex-1 sm:flex-none">
-                            {(list).filter(el => el.name && el.email && el.phone).map(data => {
+                            {(list).filter(el => el.name && el.email && el.phone && el.instaId).map(data => {
                                 return (
                                     <tr className="flex flex-col flex-no wrap sm:table-row my-4  bg-gray-200">
                                         <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
@@ -49,6 +50,10 @@ export const UserData = () => {
                                         <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                                             <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Email</span>
                                             <a className="hover:text-blue-500" href={`mailto:${data.email}`}>{data.email}</a>
+                                        </td>
+                                        <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                                            <span className="lg:hidden rounded-lg absolute top-2 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Instagram Id</span>
+                                            <a className="hover:text-blue-500" href={`mailto:${data.email}`}>{data.instaId}</a>
                                         </td>
                                     </tr>
                                 )

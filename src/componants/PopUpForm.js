@@ -46,7 +46,7 @@ export const PopUpForm = (props) => {
     const onSubmit = (data, e) => {
         e.preventDefault()
         setShowAlert(true);
-        saveUserData({ email: data.to_name, name: data.from_name, phone: data.phoneNo })
+        saveUserData({ email: data.to_name, name: data.from_name, phone: data.phoneNo , instaId:data.insta_id })
         // playFile('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3');
 
         emailjs.sendForm("service_ggy36e6", "template_817ivy8", e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
@@ -82,6 +82,13 @@ export const PopUpForm = (props) => {
                                     type="text" name="to_name" ref={register({
                                         required: true, pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                                     })} />
+                                {errors.to_name && errors.to_name.type === "required" && (<span class="error" >This is required</span>)}
+                                {errors.to_name && errors.to_name.type === "pattern" && (<span class="error" >Invalid Email</span>)}
+                            </div>
+                            <div className="mt-8">
+                                <span className="uppercase text-sm text-gray-600 font-bold">Instagram Id</span>
+                                <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                    type="text" name="insta_id" ref={register({ required: true })}  />
                                 {errors.to_name && errors.to_name.type === "required" && (<span class="error" >This is required</span>)}
                                 {errors.to_name && errors.to_name.type === "pattern" && (<span class="error" >Invalid Email</span>)}
                             </div>
