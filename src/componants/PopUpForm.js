@@ -89,8 +89,8 @@ export const PopUpForm = (props) => {
                                 <span className="uppercase text-sm text-gray-600 font-bold">Instagram Id</span>
                                 <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                     type="text" name="insta_id" ref={register({ required: true })}  />
-                                {errors.to_name && errors.to_name.type === "required" && (<span class="error" >This is required</span>)}
-                                {errors.to_name && errors.to_name.type === "pattern" && (<span class="error" >Invalid Id</span>)}
+                                {errors.insta_id && errors.insta_id.type === "required" && (<span class="error" >This is required</span>)}
+                                {errors.insta_id && errors.insta_id.type === "pattern" && (<span class="error" >Invalid Id</span>)}
                             </div>
                             <div className="mt-8">
                                 <span className="uppercase text-sm text-gray-600 font-bold">Phone No.</span>
