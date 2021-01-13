@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useState } from 'react'
 import { useForm } from "react-hook-form";
 import emailjs from 'emailjs-com';
 import Alert from './Alert';
@@ -6,7 +7,7 @@ import { saveUserData } from '../functions/airtable';
 
 export const PopUpForm = (props) => {
 
-    var formFilled = localStorage.getItem("Alert")
+    var formFilled = localStorage.getItem("setAlert")
 
 
     const [showAlert, setShowAlert] = useState(() => {
@@ -46,8 +47,8 @@ export const PopUpForm = (props) => {
     const onSubmit = (data, e) => {
         e.preventDefault()
         setShowAlert(true);
-        saveUserData({ email: data.to_name, name: data.from_name, phone: data.phoneNo , instaId:data.insta_id })
-        // playFile('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3');
+        saveUserData({ email: data.to_name, name: data.from_name, phone: data.phoneNo, instaId: data.insta_id })
+        // // playFile('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3');
 
         emailjs.sendForm("service_ggy36e6", "template_817ivy8", e.target, "user_qcVEGAk66Pd4cuX7BrWOi")
             .then((result) => {
@@ -57,10 +58,11 @@ export const PopUpForm = (props) => {
             });
         e.target.reset()
 
-        localStorage.setItem("Alert", "true");
+        localStorage.setItem("setAlert", "true");
         setTimeout(function () {
             setModal()
         }, 20000)
+
 
     }
 
@@ -88,7 +90,7 @@ export const PopUpForm = (props) => {
                             <div className="mt-8">
                                 <span className="uppercase text-sm text-gray-600 font-bold">Instagram Id</span>
                                 <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                    type="text" name="insta_id" ref={register({ required: true })}  />
+                                    type="text" name="insta_id" ref={register({ required: true })} />
                                 {errors.insta_id && errors.insta_id.type === "required" && (<span class="error" >This is required</span>)}
                                 {errors.insta_id && errors.insta_id.type === "pattern" && (<span class="error" >Invalid Id</span>)}
                             </div>
