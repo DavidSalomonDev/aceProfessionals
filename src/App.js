@@ -8,7 +8,7 @@ import { HomePage } from "./componants/Homepage";
 import { UserData } from "./componants/UserData";
 import {
   BrowserRouter as Router,
-  Route,
+  Route,Link
 } from "react-router-dom";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
   return (
 
     <div className="App">
-      
+      <Link to="/user">USer Data</Link>
       <Router>
         <Route path="/" exact component={HomePage} />
         <Route path="/user" component={UserData} />
